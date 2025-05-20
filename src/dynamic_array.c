@@ -30,7 +30,7 @@ struct array_t_ {
   int length;
   int element_size;
   int allocated_size;
-  void *data;
+  char *data;
 };
 
 
@@ -113,7 +113,7 @@ array_resize(array_t *array, int length)
 const void *
 array_get(array_t *array, int index)
 {
-  return (const void *) array->data + (index * array->element_size);
+  return array->data + (index * array->element_size);
 }
 
 

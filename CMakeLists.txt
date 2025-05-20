@@ -1,12 +1,12 @@
+cmake_minimum_required(VERSION 3.21)
 project(MazeGenerator C)
-cmake_minimum_required(3.21)
 
 add_executable(maze_generator
-    src/bitmap.c \
-    src/dynamic_array.c \
-    src/model.c \
-    src/prims_maze.c \
-    src/renderer.c \
+    src/bitmap.c
+    src/dynamic_array.c
+    src/model.c
+    src/prims_maze.c
+    src/renderer.c
     src/maze.c
 )
 
@@ -17,4 +17,3 @@ target_compile_options(maze_generator
         -std=c17
         -pedantic
 )
-`

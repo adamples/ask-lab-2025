@@ -158,11 +158,11 @@ maze_set_wall_between(maze_t *maze, int c1_x, int c1_y, int c2_x, int c2_y, bool
 
   if (c1_x == c2_x) {
     /* Horizontal wall */
-    return bitmap_set(maze->h_walls, maze_h_wall_bit(maze, x, y), exists);
+    bitmap_set(maze->h_walls, maze_h_wall_bit(maze, x, y), exists);
   }
   else {
     /* Vertical wall */
-    return bitmap_set(maze->v_walls, maze_v_wall_bit(maze, x, y), exists);
+    bitmap_set(maze->v_walls, maze_v_wall_bit(maze, x, y), exists);
   }
 }
 
